@@ -1,7 +1,7 @@
 import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
 
 const Contact = () => (
-  <div className="min-h-screen flex items-center justify-center">
+  <div className="flex items-center justify-center">
     <div className="text-center">
       <b className="text-muted-foreground uppercase font-semibold text-sm">
         Contact Us
@@ -23,9 +23,9 @@ const Contact = () => (
           </p>
           <a
             className="mt-4 font-medium text-primary"
-            href="mailto:akashmoradiya3444@gmail.com"
+            href="mailto:dreamorigintech@gmail.com"
           >
-            akashmoradiya3444@gmail.com
+            dreamorigintech@gmail.com
           </a>
         </div>
         <div className="text-center flex flex-col items-center">
@@ -38,10 +38,10 @@ const Contact = () => (
           </p>
           <a
             className="mt-4 font-medium text-primary"
-            href="https://map.google.com"
+            href="https://maps.app.goo.gl/bJf5VHGXecYgA8YW9"
             target="_blank"
           >
-            100 Smith Street Collingwood <br /> VIC 3066 AU
+            RK Apartments, 7th Main Rd, <br /> Hoysala Nagar, Ramamurthy Nagar, <br /> Bengaluru, Karnataka 560016
           </a>
         </div>
         <div className="text-center flex flex-col items-center">
@@ -49,12 +49,12 @@ const Contact = () => (
             <PhoneIcon />
           </div>
           <h3 className="mt-6 font-semibold text-xl">Phone</h3>
-          <p className="mt-2 text-muted-foreground">Mon-Fri from 8am to 5pm.</p>
+          <p className="mt-2 text-muted-foreground">Mon-Fri from 10am to 5pm.</p>
           <a
             className="mt-4 font-medium text-primary"
             href="tel:akashmoradiya3444@gmail.com"
           >
-            +1 (555) 000-0000
+            +91 (989) 459 1650
           </a>
         </div>
       </div>
