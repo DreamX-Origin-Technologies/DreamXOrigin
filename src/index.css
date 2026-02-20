@@ -42,6 +42,14 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-pixel-square: var(--font-geist-pixel-square);
+  --font-pixel-grid: var(--font-geist-pixel-grid);
+  --font-pixel-circle: var(--font-geist-pixel-circle);
+  --font-pixel-triangle: var(--font-geist-pixel-triangle);
+  --font-pixel-line: var(--font-geist-pixel-line);
 }
 
 :root {
@@ -82,6 +90,8 @@
   --color-3: lab(63.9201% -4.74718 -55.8744);
   --color-4: lab(77.523% -27.2624 -34.6643);
   --color-5: lab(91.5934% -50.0585 74.451);
+
+  --default-font-family: "Geist", sans-serif;
 }
 
 .dark {

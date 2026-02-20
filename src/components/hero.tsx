@@ -24,7 +24,7 @@ export default function HeroSection() {
 
 			{/* main content */}
 
-			<div className="relative flex flex-col items-center justify-center gap-5 pt-32 pb-30">
+			<div className="relative flex flex-col items-center justify-center gap-5 pt-32 pb-30 bg-[radial-gradient(ellipse_at_center,theme(--color-background/.8)_25%,transparent,transparent)]">
 				{/* X Content Faded Borders */}
 				<div
 					aria-hidden="true"

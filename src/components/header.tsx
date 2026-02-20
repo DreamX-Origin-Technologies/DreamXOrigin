@@ -25,13 +25,14 @@ export function Header() {
           >
             <Logo className="h-4" /> Dream Origin
           </a>
+          <div className="hidden items-center gap-2 md:flex">
+            <DesktopNav />
+          </div>
         </div>
+
         <div className="hidden items-center gap-2 md:flex">
-          <DesktopNav />
+          <Button>Get Started</Button>
         </div>
-        <div className="hidden items-center gap-2 md:flex">
-					<Button>Get Started</Button>
-				</div>
         <MobileNav />
       </nav>
     </header>

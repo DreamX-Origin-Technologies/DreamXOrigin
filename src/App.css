@@ -1,6 +1,6 @@
-#root { 
+#root {
 }
-
+ 
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -35,4 +35,10 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.hero-gradiant {
+  background-image:
+    radial-gradient(77% 116% at 37% 67%, rgb(238, 165, 186), rgba(238, 165, 186, 0) 50%), radial-gradient(56% 84% at 34% 56%, rgb(58, 139, 253), rgba(58, 139, 253, 0) 50%), radial-gradient(85% 127% at 100% 100%, rgb(228, 199, 149), rgba(228, 199, 149, 0) 50%), radial-gradient(82% 122% at 3% 29%, rgb(133, 90, 252), rgba(133, 90, 252, 0) 50%), radial-gradient(90% 136% at 52% 100%, rgb(253, 58, 78), rgba(253, 58, 78, 0) 50%), radial-gradient(102% 143% at 92% 7%, rgb(114, 254, 125), rgba(114, 254, 125, 0) 50%)
+  /* background-size: 40px 40px; */
 }
