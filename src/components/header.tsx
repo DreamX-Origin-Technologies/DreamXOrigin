@@ -5,6 +5,7 @@ import { Logo } from "@/components/logo";
 import { cn } from "@/lib/utils";
 import { DesktopNav } from "@/components/desktop-nav";
 import { MobileNav } from "@/components/mobile-nav";
+import { Button } from "@/components/ui/button";
 
 export function Header() {
   const scrolled = useScroll(10);
@@ -28,6 +29,9 @@ export function Header() {
         <div className="hidden items-center gap-2 md:flex">
           <DesktopNav />
         </div>
+        <div className="hidden items-center gap-2 md:flex">
+					<Button>Get Started</Button>
+				</div>
         <MobileNav />
       </nav>
     </header>

@@ -12,6 +12,7 @@ import {
   productLinks,
 } from "@/components/nav-links";
 import { LinkItem } from "@/components/sheard";
+import { Button } from "@/components/ui/button";
 
 export function DesktopNav() {
   return (
@@ -22,27 +23,16 @@ export function DesktopNav() {
             Product
           </NavigationMenuTrigger>
           <NavigationMenuContent className="bg-muted/50 p-1 pr-1.5 dark:bg-background">
-            <div className="grid w-lg grid-cols-2 gap-2 rounded-md border bg-popover p-2 shadow">
+            <div className="grid w-2xs grid-cols-1 gap-2 p-2 rounded-md border bg-popover shadow">
               {productLinks.map((item, i) => (
                 <NavigationMenuLink
-                  asChild
                   className="w-full flex-row gap-x-2"
                   key={`item-${item.label}-${i}`}
                 >
-                  <LinkItem {...item} />
+                  <item.icon className="size-4 text-foreground" />
+                  <span className="font-medium">{item.label}</span>
                 </NavigationMenuLink>
               ))}
-            </div>
-            <div className="p-2">
-              <p className="text-muted-foreground text-sm">
-                Interested?{" "}
-                <a
-                  className="font-medium text-foreground hover:underline"
-                  href="#"
-                >
-                  Schedule a demo
-                </a>
-              </p>
             </div>
           </NavigationMenuContent>
         </NavigationMenuItem>
@@ -55,11 +45,12 @@ export function DesktopNav() {
               <div className="space-y-2 rounded-md border bg-popover p-2 shadow">
                 {companyLinks.map((item, i) => (
                   <NavigationMenuLink
-                    asChild
                     className="w-full flex-row gap-x-2"
+                    href={item.href}
                     key={`item-${item.label}-${i}`}
                   >
-                    <LinkItem {...item} />
+                    <item.icon className="size-4 text-foreground" />
+                    <span className="font-medium">{item.label}</span>
                   </NavigationMenuLink>
                 ))}
               </div>
@@ -78,11 +69,14 @@ export function DesktopNav() {
             </div>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <NavigationMenuLink asChild className="px-4">
+        <Button asChild key={""} size="sm" variant="ghost">
+								 Pricing
+							</Button>
+        {/* <NavigationMenuLink asChild className="px-4">
           <a className="rounded-md p-2 hover:bg-accent" href="#">
             Pricing
           </a>
-        </NavigationMenuLink>
+        </NavigationMenuLink> */}
       </NavigationMenuList>
     </NavigationMenu>
   );

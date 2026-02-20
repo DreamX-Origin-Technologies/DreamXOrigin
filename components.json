@@ -21,6 +21,7 @@
   "registries": {
     "@efferd": "https://efferd.com/r/{name}.json",
     "@animate-ui": "https://animate-ui.com/r/{name}.json",
-    "@eldoraui": "https://eldoraui.site/r/{name}.json"
+    "@eldoraui": "https://eldoraui.site/r/{name}.json",
+    "@motion-primitives": "https://motion-primitives.com/c/{name}.json"
   }
 }
