@@ -11,8 +11,6 @@ import {
   companyLinks2,
   productLinks,
 } from "@/components/nav-links";
-import { LinkItem } from "@/components/sheard";
-import { Button } from "@/components/ui/button";
 
 export function DesktopNav() {
   return (
@@ -71,7 +69,7 @@ export function DesktopNav() {
         </NavigationMenuItem>
         <NavigationMenuLink asChild className="px-4">
           <a className="rounded-md p-2 hover:bg-accent font-medium" href="#">
-            Careers
+            Careers - Comming soon
           </a>
         </NavigationMenuLink>
       </NavigationMenuList>

@@ -25,7 +25,7 @@ export function Footer() {
               <Logo className="h-5" /> Dream Origin
             </a>
             <p className="max-w-sm text-balance text-muted-foreground text-sm">
-              Beautify your app with Dream Origin.
+              Scale your business with Dream Origin.
             </p>
             <div className="flex gap-2">
               {socialLinks.map((item, index) => (

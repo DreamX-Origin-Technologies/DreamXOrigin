@@ -27,11 +27,11 @@ export const productLinks: LinkItemType[] = [
     href: "#",
     icon: UserPlusIcon,
   },
-  {
-    label: "21Neurons",
-    href: "#",
-    icon: GlobeIcon,
-  }
+  // {
+  //   label: "21Neurons",
+  //   href: "#",
+  //   icon: GlobeIcon,
+  // }
 ];
 
 export const companyLinks: LinkItemType[] = [
@@ -54,22 +54,17 @@ export const companyLinks: LinkItemType[] = [
 
 export const companyLinks2: LinkItemType[] = [
   {
-    label: "Terms of Service",
+    label: "Terms of Service - Comming soon",
     href: "#",
     icon: FileText,
   },
   {
-    label: "Privacy Policy",
+    label: "Privacy Policy - Comming soon",
     href: "#",
     icon: Shield,
   },
   {
-    label: "Refund Policy",
-    href: "#",
-    icon: RotateCcw,
-  },
-  {
-    label: "Blog",
+    label: "Blog - Comming soon",
     href: "#",
     icon: Leaf,
   },

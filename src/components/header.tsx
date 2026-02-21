@@ -31,7 +31,9 @@ export function Header() {
         </div>
 
         <div className="hidden items-center gap-2 md:flex">
-          <Button>Get Started</Button>
+          <a href="#contact-us">
+            <Button>Contact Us</Button>
+          </a>
         </div>
         <MobileNav />
       </nav>
