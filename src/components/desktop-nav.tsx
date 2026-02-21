@@ -69,14 +69,11 @@ export function DesktopNav() {
             </div>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <Button asChild key={""} size="sm" variant="ghost">
-								 Pricing
-							</Button>
-        {/* <NavigationMenuLink asChild className="px-4">
-          <a className="rounded-md p-2 hover:bg-accent" href="#">
-            Pricing
+        <NavigationMenuLink asChild className="px-4">
+          <a className="rounded-md p-2 hover:bg-accent font-medium" href="#">
+            Careers
           </a>
-        </NavigationMenuLink> */}
+        </NavigationMenuLink>
       </NavigationMenuList>
     </NavigationMenu>
   );

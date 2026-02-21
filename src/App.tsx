@@ -1,17 +1,17 @@
 import "./App.css";
 import { Header } from "@/components/header";
-import Footer from "@/components/footer";
+import { Footer } from "@/components/footer";
 import Contact from "@/components/contact";
 import Hero from "@/components/hero";
 import Grid from "@/components/ui/grid";
 import { DotPattern } from "@/components/ui/dot-pattern";
+import { FeatureSection } from "@/components/feature-section";
 
 function App() {
   return (
     <>
       <Header />
 
-      {/* <HexagonBackground className="z-1">  */}
       <div
         aria-hidden="true"
         className="absolute inset-0 h-175 overflow-hidden"
@@ -23,8 +23,10 @@ function App() {
       <Grid columns={25} rows={10} className="absolute h-160 "></Grid>
       <Hero />
 
+      <FeatureSection />
+
       <div className="bg-background min-h-200 relative flex w-full flex-col items-center justify-center overflow-hidden">
-        <DotPattern className="min-h-200" glow/>
+        <DotPattern className="min-h-200" glow />
         <Contact />
       </div>
 
