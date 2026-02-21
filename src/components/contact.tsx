@@ -1,7 +1,7 @@
 import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
 
 const Contact = () => (
-  <div className="flex items-center justify-center">
+  <div className="flex items-center justify-center" id="contact-us">
     <div className="text-center">
       <b className="text-muted-foreground uppercase font-semibold text-sm">
         Contact Us

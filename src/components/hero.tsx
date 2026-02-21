@@ -56,12 +56,11 @@ export default function HeroSection() {
 						"text-shadow-[0_0px_50px_theme(--color-foreground/.2)]"
 					)}
 				>
-					Building Teams Help <br /> You Scale and Lead
+					Where Ideas Become Intelligent Solutions
 				</h1>
 
 				<p className="fade-in slide-in-from-bottom-10 mx-auto max-w-md animate-in fill-mode-backwards text-center text-base text-foreground/80 tracking-wider delay-200 duration-500 ease-out sm:text-lg md:text-xl">
-					Conecting you with world-class talent <br /> to scale, innovate and
-					lead
+					Innovation starts here — engineered for impact, built for scale.
 				</p>
 
 				<div className="fade-in slide-in-from-bottom-10 flex animate-in flex-row flex-wrap items-center justify-center gap-3 fill-mode-backwards pt-2 delay-300 duration-500 ease-out">

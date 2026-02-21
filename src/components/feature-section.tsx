@@ -12,6 +12,8 @@ import {
   Tag,
   Search,
   BoxIcon,
+  Shield,
+  AtomIcon,
 } from "lucide-react";
 
 type FeatureType = {
@@ -28,7 +30,11 @@ export function FeatureSection() {
           What we do
         </h2>
         <p className="text-muted-foreground text-sm leading-relaxed md:text-base">
-          We’re a team of driven engineers who thrive on solving tough client problems. With innovation at our core and precision in our craft, we deliver solutions that achieve 99.9% satisfaction — every time.
+          We build next-generation mobile and web applications powered by intelligent AI solutions. Our mission is to transform ideas into scalable digital products that drive automation, efficiency, and business growth.
+{/*           
+          We’re a team of driven engineers who thrive on solving tough client
+          problems. With innovation at our core and precision in our craft, we
+          deliver solutions that achieve 99.9% satisfaction — every time. */}
         </p>
       </div>
 
@@ -121,5 +127,17 @@ const features: FeatureType[] = [
     title: "Product Design",
     icon: <BoxIcon />,
     description: "Design innovative products that solve real-world problems.",
+  },
+  {
+    title: "Payment Gateway Integration",
+    icon: <ShieldCheckIcon />,
+    description:
+      "Integrate a payment gateway into your business to enable seamless and secure client payments.",
+  },
+  {
+    title: "AI",
+    icon: <AtomIcon />,
+    description:
+      "We provide AI solutions to help improve your business operations and reduce the effort required to manage client flow and resolve issues.",
   },
 ];

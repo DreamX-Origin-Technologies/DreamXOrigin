@@ -6,6 +6,8 @@ import Hero from "@/components/hero";
 import Grid from "@/components/ui/grid";
 import { DotPattern } from "@/components/ui/dot-pattern";
 import { FeatureSection } from "@/components/feature-section";
+import { Whatsapp } from "@/components/whatsapp";
+import StatsCount from "./components/ui/statscount";
 
 function App() {
   return (
@@ -24,13 +26,17 @@ function App() {
       <Hero />
 
       <FeatureSection />
+      
+      <StatsCount />
 
       <div className="bg-background min-h-200 relative flex w-full flex-col items-center justify-center overflow-hidden">
         <DotPattern className="min-h-200" glow />
         <Contact />
       </div>
 
+
       <Footer />
+      <Whatsapp />
     </>
   );
 }
