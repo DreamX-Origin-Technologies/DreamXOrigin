@@ -23,7 +23,7 @@ export function Header() {
             className="flex gap-2 items-center font-medium rounded-md hover:bg-accent"
             href="/"
           >
-            <Logo className="h-4" /> Dream Origin
+            <Logo className="h-4" /> DreamX Origin
           </a>
           <div className="hidden items-center gap-2 md:flex">
             <DesktopNav />
