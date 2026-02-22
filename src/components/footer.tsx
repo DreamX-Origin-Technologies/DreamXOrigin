@@ -22,7 +22,7 @@ export function Footer() {
         <div className="grid max-w-5xl grid-cols-6 gap-6 p-4">
           <div className="col-span-6 flex flex-col gap-4 pt-5 md:col-span-4">
             <a href="#" className="flex items-center gap-2 font-medium">
-              <Logo className="h-5" /> Dream Origin
+              <Logo className="h-5" /> DreamX Origin
             </a>
             <p className="max-w-sm text-balance text-muted-foreground text-sm">
               Scale your business with Dream Origin.
@@ -74,7 +74,7 @@ export function Footer() {
         <div className="absolute inset-x-0 h-px w-full bg-border" />
         <div className="flex max-w-4xl flex-col justify-between gap-2 py-4">
           <p className="text-center font-light text-muted-foreground text-sm">
-            &copy; {new Date().getFullYear()} DreamX Origin, All rights reserved
+            &copy; {new Date().getFullYear()} DreamX Origin, All rights reserved.
           </p>
         </div>
       </div>
