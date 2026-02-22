@@ -54,17 +54,17 @@ export const companyLinks: LinkItemType[] = [
 
 export const companyLinks2: LinkItemType[] = [
   {
-    label: "Terms of Service - Comming soon",
+    label: "Terms of Service - Coming soon",
     href: "#",
     icon: FileText,
   },
   {
-    label: "Privacy Policy - Comming soon",
+    label: "Privacy Policy - Coming soon",
     href: "#",
     icon: Shield,
   },
   {
-    label: "Blog - Comming soon",
+    label: "Blog - Coming soon",
     href: "#",
     icon: Leaf,
   },

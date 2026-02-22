@@ -68,7 +68,7 @@ export default function HeroSection() {
 						<PhoneCallIcon data-icon="inline-start" />{" "}
 						Book a Call
 					</Button>
-					<Button className="rounded-full" size="lg">
+					<Button className="rounded-full" size="lg" >
 						Get started{" "}
 						<ArrowRightIcon data-icon="inline-end" />
 					</Button>
