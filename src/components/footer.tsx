@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
@@ -59,15 +60,25 @@ export function Footer() {
           <div className="col-span-3 w-full md:col-span-1">
             <span className="text-muted-foreground text-xs">Company</span>
             <div className="mt-2 flex flex-col gap-2">
-              {company.map(({ href, title }) => (
-                <a
-                  className="w-max text-sm hover:underline"
-                  href={href}
-                  key={title}
-                >
-                  {title}
-                </a>
-              ))}
+              {company.map(({ href, title, isRouterLink }) =>
+                isRouterLink ? (
+                  <Link
+                    className="w-max text-sm hover:underline"
+                    to={href}
+                    key={title}
+                  >
+                    {title}
+                  </Link>
+                ) : (
+                  <a
+                    className="w-max text-sm hover:underline"
+                    href={href}
+                    key={title}
+                  >
+                    {title}
+                  </a>
+                )
+              )}
             </div>
           </div>
         </div>
@@ -86,19 +97,23 @@ const company = [
   {
     title: "About Us",
     href: "#",
+    isRouterLink: false,
   },
   {
     title: "Careers",
     href: "#",
+    isRouterLink: false,
   },
   {
     title: "Brand assets",
     href: "#",
+    isRouterLink: false,
   },
   {
     title: "Privacy Policy",
-    href: "#",
-  }
+    href: "/privacy-policy",
+    isRouterLink: true,
+  },
 ];
 
 const resources = [

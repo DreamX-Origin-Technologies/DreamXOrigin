@@ -59,8 +59,8 @@ export const companyLinks2: LinkItemType[] = [
     icon: FileText,
   },
   {
-    label: "Privacy Policy - Coming soon",
-    href: "#",
+    label: "Privacy Policy",
+    href: "/privacy-policy",
     icon: Shield,
   },
   {
