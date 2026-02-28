@@ -54,14 +54,19 @@ export const companyLinks: LinkItemType[] = [
 
 export const companyLinks2: LinkItemType[] = [
   {
-    label: "Terms of Service - Coming soon",
-    href: "#",
+    label: "Privacy Policy",
+    href: "/privacy-policy",
+    icon: Shield,
+  },
+  {
+    label: "Terms & Conditions",
+    href: "/terms-and-conditions",
     icon: FileText,
   },
   {
-    label: "Privacy Policy - Coming soon",
-    href: "#",
-    icon: Shield,
+    label: "Refund & Cancellation Policy",
+    href: "/refund-cancellation-policy",
+    icon: RotateCcw,
   },
   {
     label: "Blog - Coming soon",
@@ -70,7 +75,7 @@ export const companyLinks2: LinkItemType[] = [
   },
   {
     label: "Help Center",
-    href: "#",
+    href: "/#contact-us",
     icon: HelpCircle,
   },
 ];

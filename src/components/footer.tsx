@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
@@ -14,13 +15,13 @@ export function Footer() {
     <footer className="relative">
       <div
         className={cn(
-          "mx-auto max-w-5xl lg:border-x",
+          "mx-auto max-w-6xl lg:border-x",
           "dark:bg-[radial-gradient(35%_80%_at_25%_0%,--theme(--color-foreground/.1),transparent)]",
         )}
       >
         <div className="absolute inset-x-0 h-px w-full bg-border" />
-        <div className="grid max-w-5xl grid-cols-6 gap-6 p-4">
-          <div className="col-span-6 flex flex-col gap-4 pt-5 md:col-span-4">
+        <div className="grid max-w-6xl grid-cols-7 gap-6 p-4">
+          <div className="col-span-4 flex flex-col gap-4 pt-5 md:col-span-4">
             <a href="#" className="flex items-center gap-2 font-medium">
               <Logo className="h-5" /> DreamX Origin
             </a>
@@ -56,18 +57,28 @@ export function Footer() {
               ))}
             </div>
           </div>
-          <div className="col-span-3 w-full md:col-span-1">
+          <div className="col-span-4 w-full md:col-span-1">
             <span className="text-muted-foreground text-xs">Company</span>
             <div className="mt-2 flex flex-col gap-2">
-              {company.map(({ href, title }) => (
-                <a
-                  className="w-max text-sm hover:underline"
-                  href={href}
-                  key={title}
-                >
-                  {title}
-                </a>
-              ))}
+              {company.map(({ href, title, isRouterLink }) =>
+                isRouterLink ? (
+                  <Link
+                    className="w-max text-sm hover:underline"
+                    to={href}
+                    key={title}
+                  >
+                    {title}
+                  </Link>
+                ) : (
+                  <a
+                    className="w-max text-sm hover:underline"
+                    href={href}
+                    key={title}
+                  >
+                    {title}
+                  </a>
+                )
+              )}
             </div>
           </div>
         </div>
@@ -86,19 +97,28 @@ const company = [
   {
     title: "About Us",
     href: "#",
+    isRouterLink: false,
   },
   {
     title: "Careers",
     href: "#",
-  },
-  {
-    title: "Brand assets",
-    href: "#",
+    isRouterLink: false,
   },
   {
     title: "Privacy Policy",
-    href: "#",
-  }
+    href: "/privacy-policy",
+    isRouterLink: true,
+  },
+  {
+    title: "Terms & Conditions",
+    href: "/terms-and-conditions",
+    isRouterLink: true,
+  },
+  {
+    title: "Refund & Cancellation Policy",
+    href: "/refund-cancellation-policy",
+    isRouterLink: true,
+  },
 ];
 
 const resources = [
@@ -118,12 +138,8 @@ const resources = [
 
 const socialLinks = [
   {
-    icon: <FacebookIcon />,
-    link: "#",
-  },
-  {
     icon: <LinkedinIcon />,
-    link: "#",
+    link: "https://www.linkedin.com/company/dreamxorigin-technology/",
   },
   {
     icon: <YoutubeIcon />,
