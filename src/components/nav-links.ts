@@ -54,8 +54,8 @@ export const companyLinks: LinkItemType[] = [
 
 export const companyLinks2: LinkItemType[] = [
   {
-    label: "Terms of Service - Coming soon",
-    href: "#",
+    label: "Terms & Conditions",
+    href: "/terms-and-conditions",
     icon: FileText,
   },
   {
@@ -70,7 +70,7 @@ export const companyLinks2: LinkItemType[] = [
   },
   {
     label: "Help Center",
-    href: "#",
+    href: "/#contact-us",
     icon: HelpCircle,
   },
 ];

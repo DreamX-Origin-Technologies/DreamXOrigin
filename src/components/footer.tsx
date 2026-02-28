@@ -114,6 +114,11 @@ const company = [
     href: "/privacy-policy",
     isRouterLink: true,
   },
+  {
+    title: "Terms & Conditions",
+    href: "/terms-and-conditions",
+    isRouterLink: true,
+  },
 ];
 
 const resources = [
