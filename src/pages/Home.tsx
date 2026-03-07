@@ -7,7 +7,7 @@ import StatsCount from "@/components/ui/statscount";
 import { JsonLdOrganization } from "@/components/JsonLd";
 import { SeoHead } from "@/components/SeoHead";
 
-const HOME_TITLE = "DreamX Origin | Scalable Web & Mobile App Development for Startups";
+const HOME_TITLE = "DreamXOrigin | Scalable Web & Mobile App Development for Startups";
 const HOME_DESCRIPTION =
   "We build scalable web and mobile applications for startups and businesses. React, Next.js, Flutter, React Native, and full-stack development. Get a free consultation.";
 

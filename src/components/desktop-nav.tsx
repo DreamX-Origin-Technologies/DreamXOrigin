@@ -84,9 +84,12 @@ export function DesktopNav() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuLink asChild className="px-4">
-          <a className="rounded-md p-2 hover:bg-accent font-medium" href="#">
-            Careers - Coming soon
-          </a>
+          <Link
+            to="/careers"
+            className="rounded-md p-2 hover:bg-accent font-medium"
+          >
+            Careers
+          </Link>
         </NavigationMenuLink>
       </NavigationMenuList>
     </NavigationMenu>
