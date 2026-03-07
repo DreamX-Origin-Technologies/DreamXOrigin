@@ -20,13 +20,13 @@ export function Footer() {
         )}
       >
         <div className="absolute inset-x-0 h-px w-full bg-border" />
-        <div className="grid max-w-6xl grid-cols-5 gap-6 p-4">
-          <div className="col-span-2 flex flex-col gap-4 pt-5 md:col-span-2">
+        <div className="grid max-w-6xl grid-cols-7 gap-6 p-4">
+          <div className="col-span-4 flex flex-col gap-4 pt-5 md:col-span-4">
             <Link to="/" className="flex items-center gap-2 font-medium">
               <Logo className="h-5" /> DreamX Origin
             </Link>
             <p className="max-w-sm text-balance text-muted-foreground text-sm">
-              Scalable web and mobile applications for startups and businesses. React, Flutter, and full-stack development.
+              Scale your business with Dream Origin.
             </p>
             <div className="flex gap-2">
               {socialLinks.map((item, index) => (
@@ -43,36 +43,16 @@ export function Footer() {
               ))}
             </div>
           </div>
-          <div className="col-span-4 w-full md:col-span-1">
-            <span className="text-muted-foreground text-xs">Services</span>
-            <div className="mt-2 flex flex-col gap-2">
-              {services.map(({ href, title, isRouterLink }) =>
-                isRouterLink ? (
-                  <Link
-                    className="w-max text-sm hover:underline"
-                    to={href}
-                    key={title}
-                  >
-                    {title}
-                  </Link>
-                ) : (
-                  <a className="w-max text-sm hover:underline" href={href} key={title}>
-                    {title}
-                  </a>
-                )
-              )}
-            </div>
-          </div>
           <div className="col-span-3 w-full md:col-span-1">
             <span className="text-muted-foreground text-xs">Resources</span>
             <div className="mt-2 flex flex-col gap-2">
               {resources.map(({ href, title, isRouterLink }) =>
                 isRouterLink ? (
-                  <Link className="w-max text-sm hover:underline" to={href} key={title}>
+                  <Link className="w-max text-sm cursor-pointer" to={href} key={title}>
                     {title}
                   </Link>
                 ) : (
-                  <a className="w-max text-sm hover:underline" href={href} key={title}>
+                  <a className="w-max text-sm cursor-pointer" href={href} key={title}>
                     {title}
                   </a>
                 )
@@ -85,7 +65,7 @@ export function Footer() {
               {company.map(({ href, title, isRouterLink }) =>
                 isRouterLink ? (
                   <Link
-                    className="w-max text-sm hover:underline"
+                    className="w-max text-sm cursor-pointer"
                     to={href}
                     key={title}
                   >
@@ -93,7 +73,7 @@ export function Footer() {
                   </Link>
                 ) : (
                   <a
-                    className="w-max text-sm hover:underline"
+                    className="w-max text-sm cursor-pointer"
                     href={href}
                     key={title}
                   >
@@ -114,15 +94,6 @@ export function Footer() {
     </footer>
   );
 }
-
-const services = [
-  { title: "React & Next.js Development", href: "/services/react-nextjs-web-development", isRouterLink: true },
-  { title: "Flutter App Development", href: "/services/flutter-app-development", isRouterLink: true },
-  { title: "React Native Development", href: "/services/react-native-app-development", isRouterLink: true },
-  { title: "Android (Kotlin) Development", href: "/services/android-native-kotlin-development", isRouterLink: true },
-  { title: "Full-Stack Development", href: "/services/full-stack-development", isRouterLink: true },
-  { title: "Cloud (AWS) Development", href: "/services/cloud-application-development", isRouterLink: true },
-];
 
 const company = [
   { title: "About Us", href: "#", isRouterLink: false },

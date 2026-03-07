@@ -21,7 +21,7 @@ export function RefundAndCancellationPolicy() {
           of any changes, updates or clarifications, mail us at:{" "}
           <a
             href="mailto:info@dreamxorigin.com"
-            className="text-primary hover:underline font-medium"
+            className="text-primary cursor-pointer font-medium"
           >
             info@dreamxorigin.com
           </a>

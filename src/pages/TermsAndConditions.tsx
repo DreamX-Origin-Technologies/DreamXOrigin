@@ -218,7 +218,7 @@ export function TermsAndConditions() {
         <p className="text-muted-foreground leading-relaxed mb-4">
           <a
             href="mailto:info@dreamxorigin.com"
-            className="text-primary hover:underline font-medium"
+            className="text-primary cursor-pointer font-medium"
           >
             info@dreamxorigin.com
           </a>
@@ -257,7 +257,7 @@ export function TermsAndConditions() {
           If you have any questions about this statement, please contact —{" "}
           <a
             href="mailto:info@dreamxorigin.com"
-            className="text-primary hover:underline font-medium"
+            className="text-primary cursor-pointer font-medium"
           >
             info@dreamxorigin.com
           </a>

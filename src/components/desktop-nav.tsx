@@ -10,7 +10,7 @@ import {
 import {
   companyLinks,
   companyLinks2,
-  serviceLinks,
+  productLinks,
 } from "@/components/nav-links";
 
 export function DesktopNav() {
@@ -19,26 +19,18 @@ export function DesktopNav() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger className="bg-transparent">
-            Services
+            Product
           </NavigationMenuTrigger>
           <NavigationMenuContent className="bg-muted/50 p-1 pr-1.5 dark:bg-background">
-            <div className="grid w-[420px] grid-cols-1 gap-1 p-2 rounded-md border bg-popover shadow">
-              {serviceLinks.map((item, i) => (
-                <NavigationMenuLink asChild key={`service-${item.label}-${i}`}>
-                  <Link
-                    to={item.href}
-                    className="flex w-full flex-row gap-x-2 rounded-sm p-2 hover:bg-accent"
-                  >
-                    <item.icon className="size-4 shrink-0 text-foreground" />
-                    <div className="flex flex-col gap-0.5">
-                      <span className="font-medium">{item.label}</span>
-                      {item.description && (
-                        <span className="text-xs text-muted-foreground">
-                          {item.description}
-                        </span>
-                      )}
-                    </div>
-                  </Link>
+            <div className="grid w-2xs grid-cols-1 gap-2 p-2 rounded-md border bg-popover shadow">
+              {productLinks.map((item, i) => (
+                <NavigationMenuLink
+                  className="w-full flex-row gap-x-2"
+                  href={item.href}
+                  key={`item-${item.label}-${i}`}
+                >
+                  <item.icon className="size-4 text-foreground" />
+                  <span className="font-medium">{item.label}</span>
                 </NavigationMenuLink>
               ))}
             </div>

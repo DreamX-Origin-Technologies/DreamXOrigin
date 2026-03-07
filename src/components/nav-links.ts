@@ -1,59 +1,16 @@
 import {
-  Code2,
-  Cloud,
   FileText,
   HelpCircle,
   LayersIcon,
   Leaf,
   RotateCcw,
   Shield,
-  Smartphone,
-  Terminal,
   GlobeIcon,
   Handshake,
   Star,
   Users,
 } from "lucide-react";
 import type { LinkItemType } from "@/components/sheard";
-
-export const serviceLinks: LinkItemType[] = [
-  {
-    label: "React & Next.js Web Development",
-    href: "/services/react-nextjs-web-development",
-    icon: LayersIcon,
-    description: "Fast, scalable web apps for startups",
-  },
-  {
-    label: "Flutter App Development",
-    href: "/services/flutter-app-development",
-    icon: Smartphone,
-    description: "Cross-platform iOS & Android",
-  },
-  {
-    label: "React Native App Development",
-    href: "/services/react-native-app-development",
-    icon: Code2,
-    description: "One codebase, iOS & Android",
-  },
-  {
-    label: "Android Native (Kotlin)",
-    href: "/services/android-native-kotlin-development",
-    icon: Terminal,
-    description: "High-performance Android apps",
-  },
-  {
-    label: "Full-Stack Development",
-    href: "/services/full-stack-development",
-    icon: LayersIcon,
-    description: "Node.js, Go, Python backends",
-  },
-  {
-    label: "Cloud Application (AWS)",
-    href: "/services/cloud-application-development",
-    icon: Cloud,
-    description: "Scalable, cloud-ready apps",
-  },
-];
 
 export const productLinks: LinkItemType[] = [
   {
