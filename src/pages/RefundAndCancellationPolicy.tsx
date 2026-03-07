@@ -15,13 +15,13 @@ export function RefundAndCancellationPolicy() {
           Refund and Cancellation Policy
         </h1>
         <p className="text-muted-foreground leading-relaxed mb-6">
-          Only Services bought exclusively from the DreamX Origin site can be
+          Only Services bought exclusively from the DreamXOrigin site can be
           subject to exchange. We will certainly not accept returns of Services
           bought from any other third-party websites. To reach out to us in case
           of any changes, updates or clarifications, mail us at:{" "}
           <a
             href="mailto:info@dreamxorigin.com"
-            className="text-primary hover:underline font-medium"
+            className="text-primary cursor-pointer font-medium"
           >
             info@dreamxorigin.com
           </a>

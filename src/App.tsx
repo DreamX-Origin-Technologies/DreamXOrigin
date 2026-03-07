@@ -4,6 +4,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Whatsapp } from "@/components/whatsapp";
 import { Home } from "@/pages/Home";
+import { Careers } from "@/pages/Careers";
 import { PrivacyPolicy } from "@/pages/PrivacyPolicy";
 import { RefundAndCancellationPolicy } from "@/pages/RefundAndCancellationPolicy";
 import { TermsAndConditions } from "@/pages/TermsAndConditions";
@@ -14,6 +15,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/careers" element={<Careers />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/refund-cancellation-policy" element={<RefundAndCancellationPolicy />} />

@@ -71,12 +71,12 @@ export function PrivacyPolicy() {
           email address. This information is used in the best interest of the
           customer and the associated service provided. A valid user&apos;s
           I.D/ Passport / Drivers Permit Number is required to verify the
-          credentials of the information submitted. DreamX Origin
+          credentials of the information submitted. DreamXOrigin
           prioritizes on the confidentiality of the customer&apos;s
           information.
         </p>
         <p className="text-muted-foreground leading-relaxed mb-8">
-          DreamX Origin&apos;s Privacy Policy does not apply to other
+          DreamXOrigin&apos;s Privacy Policy does not apply to other
           advertisers or websites. Thus, we are advising you to consult the
           respective Privacy Policies of these third-party ad servers for more
           detailed information. It may include their practices and instructions
@@ -88,7 +88,7 @@ export function PrivacyPolicy() {
           If you have any questions about this statement, please contact —{" "}
           <a
             href="mailto:info@dreamxorigin.com"
-            className="text-primary hover:underline font-medium"
+            className="text-primary cursor-pointer font-medium"
           >
             info@dreamxorigin.com
           </a>

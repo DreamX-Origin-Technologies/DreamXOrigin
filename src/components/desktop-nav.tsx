@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -25,6 +26,7 @@ export function DesktopNav() {
               {productLinks.map((item, i) => (
                 <NavigationMenuLink
                   className="w-full flex-row gap-x-2"
+                  href={item.href}
                   key={`item-${item.label}-${i}`}
                 >
                   <item.icon className="size-4 text-foreground" />
@@ -53,24 +55,41 @@ export function DesktopNav() {
                 ))}
               </div>
               <div className="space-y-2 p-3">
-                {companyLinks2.map((item, i) => (
-                  <NavigationMenuLink
-                    className="flex-row items-center gap-x-2"
-                    href={item.href}
-                    key={`item-${item.label}-${i}`}
-                  >
-                    <item.icon className="size-4 text-foreground" />
-                    <span className="font-medium">{item.label}</span>
-                  </NavigationMenuLink>
-                ))}
+                {companyLinks2.map((item, i) => {
+                  const isInternal = item.href.startsWith("/") && !item.href.includes("#");
+                  return (
+                    <NavigationMenuLink asChild key={`company2-${item.label}-${i}`}>
+                      {isInternal ? (
+                        <Link
+                          to={item.href}
+                          className="flex flex-row items-center gap-x-2 rounded-sm p-2 hover:bg-accent"
+                        >
+                          <item.icon className="size-4 text-foreground" />
+                          <span className="font-medium">{item.label}</span>
+                        </Link>
+                      ) : (
+                        <a
+                          href={item.href}
+                          className="flex flex-row items-center gap-x-2 rounded-sm p-2 hover:bg-accent"
+                        >
+                          <item.icon className="size-4 text-foreground" />
+                          <span className="font-medium">{item.label}</span>
+                        </a>
+                      )}
+                    </NavigationMenuLink>
+                  );
+                })}
               </div>
             </div>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuLink asChild className="px-4">
-          <a className="rounded-md p-2 hover:bg-accent font-medium" href="#">
-            Careers - Coming soon
-          </a>
+          <Link
+            to="/careers"
+            className="rounded-md p-2 hover:bg-accent font-medium"
+          >
+            Careers
+          </Link>
         </NavigationMenuLink>
       </NavigationMenuList>
     </NavigationMenu>

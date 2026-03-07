@@ -32,7 +32,7 @@ export function TermsAndConditions() {
             <strong>You</strong> (&apos;The Client&apos;)
           </li>
           <li>
-            <strong>Us</strong> (DreamX Origin, and hereinafter referred to as
+            <strong>Us</strong> (DreamXOrigin, and hereinafter referred to as
             &apos;the Company&apos;)
           </li>
           <li>
@@ -121,7 +121,7 @@ export function TermsAndConditions() {
           Database, Application and E-Commerce Development:
         </h2>
         <p className="text-muted-foreground leading-relaxed mb-4">
-          DreamX Origin cannot take responsibility for any losses incurred by the
+          DreamXOrigin cannot take responsibility for any losses incurred by the
           use of any software created for the client. Whilst every care has been
           taken to ensure products are problem free and accurate, the ultimate
           responsibility lies with the client in ensuring that all software is
@@ -129,7 +129,7 @@ export function TermsAndConditions() {
         </p>
         <p className="text-muted-foreground leading-relaxed mb-4">
           Where applications or sites are developed on servers not provided by
-          DreamX Origin, the client is expected to provide or seek any
+          DreamXOrigin, the client is expected to provide or seek any
           information, additional software, support or co-operation pertaining to
           the server required in order for the application to be correctly
           developed. Where large applications are to be developed, it is the
@@ -138,9 +138,9 @@ export function TermsAndConditions() {
         </p>
         <p className="text-muted-foreground leading-relaxed mb-8">
           The client is expected to test fully any application or programming
-          relating to a site developed by DreamX Origin before being made
+          relating to a site developed by DreamXOrigin before being made
           generally available for use. Where &quot;bugs&quot;, errors or other
-          issues are found after the site is live, DreamX Origin will endeavour
+          issues are found after the site is live, DreamXOrigin will endeavour
           (but is not obliged to) to correct these issues to meet the standards
           of function outlined in the brief.
         </p>
@@ -182,7 +182,7 @@ export function TermsAndConditions() {
           Changes to these Terms and Conditions:
         </h2>
         <p className="text-muted-foreground leading-relaxed mb-8">
-          DreamX Origin reserves the right to add, delete, or modify any
+          DreamXOrigin reserves the right to add, delete, or modify any
           provision of these Terms And Conditions at any time without notice.
           Failure to receive notification of a change does not Make those
           changes invalid.
@@ -207,7 +207,7 @@ export function TermsAndConditions() {
         <p className="text-muted-foreground leading-relaxed mb-2 font-mono text-sm">
           Bank Name – Some Known Bank
           <br />
-          Account Name: DreamX Origin, A/C Number: 00000000000000
+          Account Name: DreamXOrigin, A/C Number: 00000000000000
           <br />
           Some Known Bank (Some Known City), IFSC CODE: Some Known IFSC CODE
         </p>
@@ -218,7 +218,7 @@ export function TermsAndConditions() {
         <p className="text-muted-foreground leading-relaxed mb-4">
           <a
             href="mailto:info@dreamxorigin.com"
-            className="text-primary hover:underline font-medium"
+            className="text-primary cursor-pointer font-medium"
           >
             info@dreamxorigin.com
           </a>
@@ -257,7 +257,7 @@ export function TermsAndConditions() {
           If you have any questions about this statement, please contact —{" "}
           <a
             href="mailto:info@dreamxorigin.com"
-            className="text-primary hover:underline font-medium"
+            className="text-primary cursor-pointer font-medium"
           >
             info@dreamxorigin.com
           </a>

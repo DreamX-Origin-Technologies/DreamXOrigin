@@ -4,10 +4,18 @@ import Grid from "@/components/ui/grid";
 import { DotPattern } from "@/components/ui/dot-pattern";
 import { FeatureSection } from "@/components/feature-section";
 import StatsCount from "@/components/ui/statscount";
+import { JsonLdOrganization } from "@/components/JsonLd";
+import { SeoHead } from "@/components/SeoHead";
+
+const HOME_TITLE = "DreamXOrigin | Scalable Web & Mobile App Development for Startups";
+const HOME_DESCRIPTION =
+  "We build scalable web and mobile applications for startups and businesses. React, Next.js, Flutter, React Native, and full-stack development. Get a free consultation.";
 
 export function Home() {
   return (
     <>
+      <SeoHead title={HOME_TITLE} description={HOME_DESCRIPTION} canonical="/" />
+      <JsonLdOrganization />
       <div
         aria-hidden="true"
         className="absolute inset-0 h-175 overflow-hidden"
