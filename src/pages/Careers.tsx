@@ -1,6 +1,7 @@
 import { useState, Fragment, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { RainbowButton } from "@/components/ui/rainbow-button";
 import { SeoHead } from "@/components/SeoHead";
 import { ArrowRightIcon, ChevronDownIcon, XIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -332,15 +333,15 @@ export function Careers() {
             <p className="mt-6 text-base text-muted-foreground md:text-lg">
               Want to join our team? See open roles below.
             </p>
-            <Button
-              variant="outline"
+            <RainbowButton
+              variant="default"
               size="lg"
-              className="mt-8 gap-2 border-border bg-background shadow-sm hover:bg-muted/50"
+              className="mt-8"
               onClick={scrollToRoles}
             >
               View open roles
               <ArrowRightIcon className="size-4" />
-            </Button>
+            </RainbowButton>
           </div>
         </section>
 

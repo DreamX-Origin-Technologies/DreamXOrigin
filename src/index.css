@@ -76,6 +76,43 @@
   }
 }
 
+/* Hero: animated grid + light rays (global so animations run) */
+@keyframes hero-grid-fade {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.85; }
+}
+@keyframes hero-ray-pulse {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 0.75; }
+}
+
+/* Hero isometric tech illustration */
+@keyframes tech-beam-glow {
+  0%, 100% { opacity: 0.65; }
+  50% { opacity: 1; }
+}
+@keyframes tech-sphere-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+@keyframes tech-dash-flow {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -24; }
+}
+@keyframes tech-graph-pulse {
+  0%, 100% { opacity: 0.88; }
+  50% { opacity: 1; }
+}
+
+/* Magic UI rainbow button – animates third (rainbow) layer only */
+@keyframes rainbow-button {
+  0% { background-position: 0% 50%, 0% 50%, 0% 50%; }
+  100% { background-position: 0% 50%, 0% 50%, 200% 50%; }
+}
+.animate-rainbow-button {
+  animation: rainbow-button var(--rainbow-speed, 3s) linear infinite;
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -155,6 +192,29 @@
 @keyframes gradient-text {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
+}
+
+@keyframes rainbow-text {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+/* Rainbow button–style text (same colors as rainbow button) */
+.rainbow-text {
+  background: linear-gradient(
+    90deg,
+    var(--color-1),
+    var(--color-5),
+    var(--color-3),
+    var(--color-4),
+    var(--color-2)
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow-text 3s linear infinite;
+  font-weight: 600;
 }
 
 .gradient-text-animate {
