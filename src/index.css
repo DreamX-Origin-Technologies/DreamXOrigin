@@ -76,6 +76,20 @@
   }
 }
 
+/* Magic UI Meteors */
+@keyframes meteor {
+  0% {
+    transform: rotate(var(--angle)) translateX(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(var(--angle)) translateX(-500px);
+    opacity: 0;
+  }
+}
 /* Hero: animated grid + light rays (global so animations run) */
 @keyframes hero-grid-fade {
   0%, 100% { opacity: 0.5; }
