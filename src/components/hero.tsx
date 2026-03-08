@@ -4,7 +4,7 @@ import heroImage from "@/assets/Hero img.svg";
 
 export default function HeroSection() {
   return (
-    <section className="relative flex min-h-[75dvh] min-h-[75vh] flex-col overflow-hidden bg-background lg:flex-row lg:items-center">
+    <section className="relative flex min-h-[85dvh] min-h-[85vh] flex-col overflow-hidden bg-background lg:flex-row lg:items-center top-[-50px]">
       {/* Magic UI: animated grid + light rays for ambient background */}
       <AnimatedGrid
         gridSize={56}
