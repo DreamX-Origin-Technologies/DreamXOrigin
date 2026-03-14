@@ -14,7 +14,7 @@ import type { LinkItemType } from "@/components/sheard";
 
 export const productLinks: LinkItemType[] = [
   {
-    label: "E-Commerce",
+    label: "DreamX Commerce",
     href: "#",
     icon: LayersIcon,
   },

@@ -8,6 +8,7 @@ import { Careers } from "@/pages/Careers";
 import { PrivacyPolicy } from "@/pages/PrivacyPolicy";
 import { RefundAndCancellationPolicy } from "@/pages/RefundAndCancellationPolicy";
 import { TermsAndConditions } from "@/pages/TermsAndConditions";
+import { EcommercePreview } from "@/pages/EcommercePreview";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/refund-cancellation-policy" element={<RefundAndCancellationPolicy />} />
+        <Route path="/ecommerce" element={<EcommercePreview />} />
       </Routes>
       <Footer />
       <Whatsapp />
