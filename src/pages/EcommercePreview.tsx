@@ -13,41 +13,79 @@ import {
 } from "lucide-react";
 import { SeoHead } from "@/components/SeoHead";
 import { EcommerceOneStopIllustration } from "@/components/ecommerce-one-stop-illustration";
+import heroImage from "@/assets/ecommerce banner.webp";
+import waveBg from "@/assets/wave.svg";
 
 export function EcommercePreview() {
   return (
-    <div className="w-full min-h-screen bg-background text-foreground flex flex-col pt-20">
+    <div className="w-full min-h-screen text-foreground flex flex-col">
       <SeoHead
         title="DreamX Commerce | One-Stop E-Commerce Platform for Business"
         description="Your one-stop solution for online selling. Scale your business with a complete e-commerce platform: multi-channel selling, payments, inventory, and analytics—built for startups and enterprises."
         canonical="/ecommerce"
       />
 
-      {/* Hero Section - B2B focused */}
-      <section className="relative w-full py-24 lg:py-32 overflow-hidden flex flex-col items-center justify-center text-center px-4">
-        <Meteors number={30} />
-        <div className="z-10 max-w-4xl space-y-6 flex flex-col items-center">
-          <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-sm font-medium text-primary mb-4">
-            <Zap className="mr-2 h-4 w-4" />
-            Built for Business
-          </div>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-foreground to-foreground/70">
-            Your One-Stop Solution for{" "}
-            <br className="hidden sm:block" />
-            Online Selling
+      {/* Hero Section - reference-inspired clean layout */}
+
+      <section className="relative w-full overflow-hidden px-4 pt-16 pb-10 lg:pt-24 z-2">
+        <Meteors number={12} />
+        <div
+          className="pointer-events-none absolute -left-28 top-8 h-80 w-80 rounded-full bg-gradient-to-br from-fuchsia-400/35 via-pink-400/25 to-transparent blur-3xl"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute right-[-7rem] top-12 h-[22rem] w-[22rem] rounded-full bg-gradient-to-br from-cyan-400/35 via-sky-400/25 to-transparent blur-3xl"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute left-1/2 top-60 h-72 w-72 -translate-x-1/2 rounded-full bg-gradient-to-br from-emerald-300/30 via-teal-300/20 to-transparent blur-3xl"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute left-[12%] top-[28%] h-24 w-24 rotate-12 rounded-3xl border border-violet-300/45 bg-violet-300/20 blur-sm"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute right-[14%] top-[34%] h-20 w-20 -rotate-6 rounded-full border border-sky-300/50 bg-sky-200/30 blur-sm"
+          aria-hidden
+        />
+        <div className="relative z-10 mx-auto flex max-w-6xl flex-col items-center text-center">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground">
+            <span className="text-sky-500 italic">Style-first</span> commerce
           </h1>
-          <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-lg sm:leading-8 mb-8 mt-4 text-center">
-            DreamX Commerce eliminates complexity, integrates with your tools, and scales with your business—so you can sell more across web, mobile, and marketplaces from a single platform.
+          <p className="mt-5 max-w-3xl text-base leading-8 text-muted-foreground sm:text-lg">
+            Launch and scale your fashion store with one ecommerce platform for catalog
+            management, smart merchandising, secure checkout, and real-time sales insights.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-8">
-            <RainbowButton className="w-full sm:w-auto h-12 px-8 text-base font-semibold">
-              Get a Quick Demo
+
+          <div className="mt-8 flex w-full flex-col items-center justify-center gap-4 sm:w-auto sm:flex-row">
+            <RainbowButton className="h-10 px-7 text-base font-semibold">
+              Book a Demo
             </RainbowButton>
-            <Button variant="outline" size="lg" className="w-full sm:w-auto h-12 px-8 text-base">
-              See How It Works
+            <Button
+              variant="outline"
+              size="lg"
+              className="h-10 border-[#e7d7eb] bg-[#fff7ff] px-7 text-base text-[#4b3651] hover:bg-[#fff1ff]"
+            >
+              Meet an advisor
             </Button>
           </div>
+
+          <div className="relative mt-12 w-full max-w-5xl z-2">
+            <div className="relative overflow-hidden z-2 shadow-md rounded-md border-border/60 bg-card">
+              <img
+                src={heroImage}
+                alt="DreamX product preview"
+                className="h-full w-full object-cover z-2"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
         </div>
+      </section>
+      <section className="absolute md:top-120 w-full z-1">
+        <img src={waveBg} alt="wave" className="h-full" />
       </section>
 
       {/* One Stop Solution Section - with creative illustration */}
