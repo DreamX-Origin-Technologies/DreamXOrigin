@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { RainbowButton } from "@/components/ui/rainbow-button";
+import { MagicCard } from "@/components/ui/magic-card";
 import { Meteors } from "@/components/ui/meteors";
 import { Badge } from "@/components/ui/badge";
 import {
   Star,
   Zap,
-  Shield,
   Package,
+  Shield,
   ShoppingCart,
   TrendingUp
 } from "lucide-react";
@@ -14,6 +15,14 @@ import { SeoHead } from "@/components/SeoHead";
 import { EcommerceOneStopIllustration } from "@/components/ecommerce-one-stop-illustration";
 import heroImage from "@/assets/ecommerce banner.webp";
 import waveBg from "@/assets/wave.svg";
+import {
+  ImageComparison,
+  ImageComparisonImage,
+  ImageComparisonSlider,
+} from '@/components/motion-primitives/image-comparison';
+import emptyShopImage from '@/assets/retail-shop-empty.jpg';
+import successShopImage from '@/assets/ecommerce-thriving.png';
+import { motion } from 'motion/react';
 
 function FeatureCard({ title, description, icon, gradient, className }: { title: string, description: string, icon: React.ReactNode, gradient: string, className?: string }) {
   return (
@@ -199,36 +208,103 @@ export function EcommercePreview() {
         </div>
       </section>
 
+      <section className="w-full px-4 py-8 bg-muted/30">
+        {/* Center: Image Comparison */}
+        <div className="relative z-10 flex items-center justify-center max-w-6xl mx-auto">
+          <div className="w-full aspect-video sm:aspect-[4/3] lg:aspect-[21/9] relative rounded-2xl overflow-hidden shadow-2xl border border-border/10">
+            <ImageComparison className="w-full h-full object-cover" enableHover>
+              <ImageComparisonImage
+                src={successShopImage}
+                alt="Thriving Online Store"
+                position="left"
+              />
+              <ImageComparisonImage
+                src={emptyShopImage}
+                alt="Empty Retail Store"
+                position="right"
+                className="opacity-90 saturate-50 contrast-125"
+              />
+              <ImageComparisonSlider className="bg-white/80 backdrop-blur-sm w-[2px]">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-background border border-border/50 rounded-full flex gap-1 items-center justify-center shadow-2xl cursor-ew-resize">
+                  <div className="w-1.5 h-4 bg-muted-foreground/30 rounded-full" />
+                  <div className="w-1.5 h-4 bg-muted-foreground/30 rounded-full" />
+                </div>
+              </ImageComparisonSlider>
+            </ImageComparison>
+
+            {/* Floating Labels */}
+            <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md px-4 py-1.5 rounded-full text-white/90 text-[13px] font-medium z-10 pointer-events-none shadow-sm border border-white/10">
+              Traditional Retail
+            </div>
+            <div className="absolute top-4 right-4 bg-pink-500/90 backdrop-blur-md px-4 py-1.5 rounded-full text-white text-[13px] font-bold z-10 pointer-events-none shadow-md border border-white/20">
+              Unified Commerce
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Value Proposition - B2B focused */}
-      <section className="w-full py-24 px-4 bg-muted/30">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="flex flex-col items-center p-6 bg-card rounded-2xl border border-border/50 shadow-sm">
-              <div className="size-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
-                <Shield className="h-8 w-8 text-primary" />
+      <section className="w-full py-24 px-4 bg-muted/30 relative overflow-hidden">
+        <div className="container mx-auto max-w-6xl relative">
+          
+          {/* Moving Line Animation (Beam) behind cards */}
+          <div className="absolute top-[40%] left-10 right-10 h-[2px] hidden md:block pointer-events-none z-0">
+             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-border/40 to-transparent" />
+             {/* The moving laser line */}
+             <motion.div
+               className="absolute top-[-1px] bottom-[-1px] w-48 bg-gradient-to-r from-transparent via-sky-400 to-transparent blur-[1px] opacity-70"
+               animate={{ left: ["-20%", "120%"] }}
+               transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+             />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center relative z-10">
+            {/* Card 1 */}
+            <div className="relative group p-[1px] rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-500 hover:-translate-y-1 h-full">
+              <div className="absolute inset-[-100%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,rgba(99,102,241,0.5)_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative h-full w-full bg-card rounded-[calc(1rem-1px)]">
+                <MagicCard className="flex flex-col items-center p-6 bg-transparent h-full border-none shadow-none" gradientFrom="#6366f1" gradientTo="#a855f7">
+                  <div className="size-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center mb-6 shadow-md transition-transform group-hover:scale-110 duration-500">
+                    <Shield className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">Secure & Compliant</h3>
+                  <p className="text-muted-foreground">
+                    PCI-ready checkout, encrypted payments, and compliance built in so your business and customers stay protected.
+                  </p>
+                </MagicCard>
               </div>
-              <h3 className="text-xl font-bold mb-3">Secure & Compliant</h3>
-              <p className="text-muted-foreground">
-                PCI-ready checkout, encrypted payments, and compliance built in so your business and customers stay protected.
-              </p>
             </div>
-            <div className="flex flex-col items-center p-6 bg-card rounded-2xl border border-border/50 shadow-sm">
-              <div className="size-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
-                <Zap className="h-8 w-8 text-primary" />
+            
+            {/* Card 2 */}
+            <div className="relative group p-[1px] rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-500 hover:-translate-y-1 h-full">
+              <div className="absolute inset-[-100%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,rgba(34,211,238,0.5)_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative h-full w-full bg-card rounded-[calc(1rem-1px)]">
+                <MagicCard className="flex flex-col items-center p-6 bg-transparent h-full border-none shadow-none" gradientFrom="#22d3ee" gradientTo="#3b82f6">
+                  <div className="size-16 rounded-2xl bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center mb-6 shadow-md transition-transform group-hover:scale-110 duration-500">
+                    <Zap className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">Scalable Infrastructure</h3>
+                  <p className="text-muted-foreground">
+                    Built to scale from launch to enterprise. High performance and reliability so your store grows without limits.
+                  </p>
+                </MagicCard>
               </div>
-              <h3 className="text-xl font-bold mb-3">Scalable Infrastructure</h3>
-              <p className="text-muted-foreground">
-                Built to scale from launch to enterprise. High performance and reliability so your store grows without limits.
-              </p>
             </div>
-            <div className="flex flex-col items-center p-6 bg-card rounded-2xl border border-border/50 shadow-sm">
-              <div className="size-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
-                <Star className="h-8 w-8 text-primary" />
+
+            {/* Card 3 */}
+            <div className="relative group p-[1px] rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-500 hover:-translate-y-1 h-full">
+              <div className="absolute inset-[-100%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,rgba(249,115,22,0.5)_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative h-full w-full bg-card rounded-[calc(1rem-1px)]">
+                <MagicCard className="flex flex-col items-center p-6 bg-transparent h-full border-none shadow-none" gradientFrom="#fb923c" gradientTo="#f43f5e">
+                  <div className="size-16 rounded-2xl bg-gradient-to-br from-orange-400 to-rose-500 flex items-center justify-center mb-6 shadow-md transition-transform group-hover:scale-110 duration-500">
+                    <Star className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">Integration-Ready</h3>
+                  <p className="text-muted-foreground">
+                    Connect with your existing tools—ERPs, CRMs, marketplaces, and custom systems—for a true one-stop setup.
+                  </p>
+                </MagicCard>
               </div>
-              <h3 className="text-xl font-bold mb-3">Integration-Ready</h3>
-              <p className="text-muted-foreground">
-                Connect with your existing tools—ERPs, CRMs, marketplaces, and custom systems—for a true one-stop setup.
-              </p>
             </div>
           </div>
         </div>
