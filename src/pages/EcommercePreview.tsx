@@ -246,16 +246,16 @@ export function EcommercePreview() {
       {/* Value Proposition - B2B focused */}
       <section className="w-full py-24 px-4 bg-muted/30 relative overflow-hidden">
         <div className="container mx-auto max-w-6xl relative">
-          
+
           {/* Moving Line Animation (Beam) behind cards */}
-          <div className="absolute top-[40%] left-10 right-10 h-[2px] hidden md:block pointer-events-none z-0">
-             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-border/40 to-transparent" />
-             {/* The moving laser line */}
-             <motion.div
-               className="absolute top-[-1px] bottom-[-1px] w-48 bg-gradient-to-r from-transparent via-sky-400 to-transparent blur-[1px] opacity-70"
-               animate={{ left: ["-20%", "120%"] }}
-               transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-             />
+          <div className="absolute top-[40%] left-10 right-10 h-[0px] hidden md:block pointer-events-none z-0">
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-border/40 to-transparent" />
+            {/* The moving laser line */}
+            <motion.div
+              className="absolute top-[-1px] bottom-[-1px] w-60 bg-gradient-to-r from-transparent via-sky-400 to-transparent"
+              animate={{ left: ["-20%", "120%"] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+            />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center relative z-10">
@@ -274,7 +274,7 @@ export function EcommercePreview() {
                 </MagicCard>
               </div>
             </div>
-            
+
             {/* Card 2 */}
             <div className="relative group p-[1px] rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-500 hover:-translate-y-1 h-full">
               <div className="absolute inset-[-100%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,rgba(34,211,238,0.5)_50%,transparent_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
