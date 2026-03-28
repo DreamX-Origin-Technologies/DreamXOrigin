@@ -1,20 +1,45 @@
 import { Button } from "@/components/ui/button";
 import { RainbowButton } from "@/components/ui/rainbow-button";
-import { MagicCard } from "@/components/ui/magic-card";
 import { Meteors } from "@/components/ui/meteors";
+import { Badge } from "@/components/ui/badge";
 import {
   Star,
   Zap,
   Shield,
-  ChevronRight,
-  LayoutDashboard,
-  Plug,
-  BarChart3,
+  Package,
+  ShoppingCart,
+  TrendingUp
 } from "lucide-react";
 import { SeoHead } from "@/components/SeoHead";
 import { EcommerceOneStopIllustration } from "@/components/ecommerce-one-stop-illustration";
 import heroImage from "@/assets/ecommerce banner.webp";
 import waveBg from "@/assets/wave.svg";
+
+function FeatureCard({ title, description, icon, gradient, className }: { title: string, description: string, icon: React.ReactNode, gradient: string, className?: string }) {
+  return (
+    <div className={`relative bg-background border border-border/50 rounded-[2rem] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)] flex flex-col p-6 w-full hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ${className || 'lg:max-w-[300px]'}`}>
+      <div className="relative w-full h-[160px] rounded-2xl mb-6 overflow-hidden flex items-center justify-center bg-zinc-50/50 dark:bg-zinc-900/50 border border-zinc-100 dark:border-zinc-800">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:14px_14px] [mask-image:linear-gradient(to_bottom,white,transparent)]" />
+
+        <div className="relative group flex items-center justify-center">
+          <div className="absolute left-[-20px] z-0 h-10 w-12 rotate-[-15deg] rounded-[1rem] bg-white/80 border border-zinc-100 shadow-sm blur-[0.5px] dark:bg-zinc-800 dark:border-zinc-700" />
+          <div className="absolute right-[-20px] z-0 h-10 w-12 rotate-[15deg] rounded-[1rem] bg-white/80 border border-zinc-100 shadow-sm blur-[0.5px] dark:bg-zinc-800 dark:border-zinc-700" />
+          <div className={`relative z-10 w-16 h-16 rounded-[1.25rem] bg-gradient-to-br ${gradient} p-[1px] shadow-xl`}>
+            <div className="w-full h-full rounded-[1.2rem] flex items-center justify-center bg-gradient-to-br from-white/20 to-transparent">
+              {icon}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="text-center px-1 flex-1 flex flex-col items-center">
+        <h3 className="text-[17px] font-semibold mb-2 text-foreground">{title}</h3>
+        <p className="text-[13px] text-muted-foreground leading-relaxed">
+          {description}
+        </p>
+      </div>
+    </div>
+  )
+}
 
 export function EcommercePreview() {
   return (
@@ -116,70 +141,60 @@ export function EcommercePreview() {
       </section>
 
       {/* Platform capabilities / What we build for business */}
-      <section className="w-full py-20">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="flex flex-col items-center text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
-              Built for Business—See What We Deliver
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl">
-              High-performance storefronts, seamless checkout, and scalable architecture. Experience the platform we build for brands and enterprises.
-            </p>
-          </div>
+      <section className="w-full py-20 px-4 md:px-6 overflow-hidden bg-background">
+        <div className="container mx-auto max-w-7xl pt-10">
+          <div className="grid lg:grid-cols-[1fr_auto] gap-12 lg:gap-8 items-start w-full relative">
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            <MagicCard className="p-6 flex flex-col h-full bg-background">
-              <div className="w-full flex-1 min-h-[250px] rounded-lg bg-zinc-100 dark:bg-zinc-800/50 flex items-center justify-center mb-6 relative overflow-hidden group">
-                <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <LayoutDashboard className="h-16 w-16 text-muted-foreground/50 group-hover:scale-110 transition-transform duration-300" />
-                <div className="absolute top-3 left-3 bg-primary text-primary-foreground text-xs font-bold px-2 py-1 rounded-sm">B2B</div>
+            {/* Left Column: Content + Card 1 */}
+            <div className="flex flex-col gap-10 lg:gap-14 max-w-xl z-20">
+              <div className="flex flex-col items-start text-left">
+                <h2 className="text-4xl sm:text-5xl lg:text-[54px] font-bold tracking-tight leading-[1.1] text-foreground mb-4">
+                  Scale your storefront:<br className="hidden sm:block" /> explore <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-orange-400 font-semibold px-1">all-in-one</span> platform.
+                </h2>
+                <p className="text-muted-foreground text-base sm:text-[17px] max-w-md leading-relaxed mb-8">
+                  Everything you need to launch, manage, and scale your online business without limitations.
+                </p>
+                {/* <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                   <Button size="lg" className="rounded-xl h-12 px-8 bg-zinc-900 text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200 shadow-sm font-medium w-full sm:w-auto transition-all">
+                     Try for free!
+                   </Button>
+                   <Button variant="outline" size="lg" className="rounded-xl h-12 px-8 shadow-sm font-medium border-border w-full sm:w-auto hover:bg-muted transition-all">
+                     View Demo
+                   </Button>
+                 </div> */}
               </div>
-              <div className="flex justify-between items-start mb-2">
-                <div>
-                  <h3 className="text-xl font-bold mb-1">Unified Dashboard</h3>
-                  <p className="text-muted-foreground text-sm">Orders, inventory, and analytics in one place</p>
-                </div>
-              </div>
-              <p className="text-muted-foreground text-sm mb-6 flex-1">Manage multiple channels and teams from a single, scalable control center.</p>
-              <Button className="w-full mt-auto group">
-                Explore Features <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </MagicCard>
 
-            <MagicCard className="p-6 flex flex-col h-full bg-background" gradientFrom="#00D2FF" gradientTo="#3A7BD5">
-              <div className="w-full flex-1 min-h-[250px] rounded-lg bg-zinc-100 dark:bg-zinc-800/50 flex items-center justify-center mb-6 relative overflow-hidden group">
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <Plug className="h-16 w-16 text-muted-foreground/50 group-hover:scale-110 transition-transform duration-300" />
+              {/* Card 1 - Manage */}
+              <div className="lg:pl-6 w-full flex justify-center lg:justify-start">
+                <FeatureCard
+                  title="Manage - Inventory"
+                  description="Centralized inventory management to track stock across all your sales channels in real-time."
+                  icon={<Package className="w-6 h-6 text-white" />}
+                  gradient="from-pink-400 to-orange-400"
+                  className="max-w-full lg:max-w-full"
+                />
               </div>
-              <div className="flex justify-between items-start mb-2">
-                <div>
-                  <h3 className="text-xl font-bold mb-1">Integrations & APIs</h3>
-                  <p className="text-muted-foreground text-sm">Connect your stack</p>
-                </div>
-              </div>
-              <p className="text-muted-foreground text-sm mb-6 flex-1">Stripe, Razorpay, ERPs, CRMs, and custom APIs—one platform that fits your workflow.</p>
-              <Button className="w-full mt-auto group">
-                View Integrations <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </MagicCard>
+            </div>
 
-            <MagicCard className="p-6 flex flex-col h-full bg-background" gradientFrom="#F5AF19" gradientTo="#F12711">
-              <div className="w-full flex-1 min-h-[250px] rounded-lg bg-zinc-100 dark:bg-zinc-800/50 flex items-center justify-center mb-6 relative overflow-hidden group">
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-red-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <BarChart3 className="h-16 w-16 text-muted-foreground/50 group-hover:scale-110 transition-transform duration-300" />
-                <div className="absolute top-3 left-3 bg-black dark:bg-white text-white dark:text-black text-xs font-bold px-2 py-1 rounded-sm">NEW</div>
+            {/* Right Column Grid (Cards 2 & 3) */}
+            <div className="grid sm:grid-cols-2 gap-6 lg:gap-8 relative z-10 w-full lg:w-auto mt-8 lg:mt-0 pb-10">
+              <div className="flex justify-center sm:justify-end lg:mt-32">
+                <FeatureCard
+                  title="Convert - Checkout"
+                  description="Frictionless, one-click checkout experiences designed to minimize cart abandonment and boost conversions."
+                  icon={<ShoppingCart className="w-6 h-6 text-white" />}
+                  gradient="from-fuchsia-400 to-indigo-400"
+                />
               </div>
-              <div className="flex justify-between items-start mb-2">
-                <div>
-                  <h3 className="text-xl font-bold mb-1">Analytics & Insights</h3>
-                  <p className="text-muted-foreground text-sm">Data that converts</p>
-                </div>
+              <div className="flex justify-center sm:justify-start lg:mt-0">
+                <FeatureCard
+                  title="Grow - Analytics"
+                  description="Actionable insights and comprehensive reporting to help you scale your operations effectively."
+                  icon={<TrendingUp className="w-6 h-6 text-white" />}
+                  gradient="from-blue-400 to-cyan-300"
+                />
               </div>
-              <p className="text-muted-foreground text-sm mb-6 flex-1">Real-time reports, customer behavior, and revenue analytics to grow your business.</p>
-              <Button className="w-full mt-auto group">
-                See Analytics <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </MagicCard>
+            </div>
           </div>
         </div>
       </section>
