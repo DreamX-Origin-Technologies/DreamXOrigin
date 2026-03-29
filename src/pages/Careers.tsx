@@ -454,13 +454,13 @@ export function Careers() {
             </div>
 
             {/* Job table */}
-            <div className="overflow-hidden rounded-xl border border-border bg-card shadow-sm">
-              <table className="w-full border-collapse text-left">
+            <div className="overflow-x-auto overflow-y-hidden rounded-xl border border-border bg-card shadow-sm">
+              <table className="w-full min-w-[600px] border-collapse text-left">
                 <thead>
                   <tr className="border-b border-border bg-muted/30 dark:bg-muted/20">
-                    <th className="px-4 py-4 text-sm font-bold text-foreground md:px-6">Role</th>
-                    <th className="px-4 py-4 text-sm font-bold text-foreground md:px-6">Department</th>
-                    <th className="px-4 py-4 text-sm font-bold text-foreground md:px-6">Location</th>
+                    <th className="px-4 py-4 text-sm font-bold text-foreground md:px-6 whitespace-nowrap">Role</th>
+                    <th className="px-4 py-4 text-sm font-bold text-foreground md:px-6 whitespace-nowrap">Department</th>
+                    <th className="px-4 py-4 text-sm font-bold text-foreground md:px-6 whitespace-nowrap">Location</th>
                     <th className="w-24 px-4 py-4 md:px-6" aria-label="Details" />
                   </tr>
                 </thead>
