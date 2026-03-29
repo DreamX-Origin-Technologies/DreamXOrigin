@@ -6,7 +6,7 @@ export type SeoHeadProps = {
   canonical?: string;
 };
 
-const SITE_NAME = "DreamXOrigin";
+const SITE_NAME = "DreamX Origin";
 
 export function SeoHead({ title, description, canonical }: SeoHeadProps) {
   useEffect(() => {

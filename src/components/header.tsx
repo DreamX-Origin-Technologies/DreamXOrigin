@@ -41,7 +41,7 @@ export function Header() {
             className="flex gap-2 items-center font-medium rounded-md hover:bg-accent"
             href="/"
           >
-            <Logo className="h-4" /> DreamXOrigin
+            <Logo className="h-4" /> DreamX Origin
           </a>
         </div>
         <div className="hidden items-center   md:flex">

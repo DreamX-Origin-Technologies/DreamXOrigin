@@ -9,7 +9,7 @@ import { JsonLdOrganization } from "@/components/JsonLd";
 import { SeoHead } from "@/components/SeoHead";
 import Testimonials01 from "@/components/testimonials-01";
 
-const HOME_TITLE = "DreamXOrigin | Scalable Web & Mobile App Development for Startups";
+const HOME_TITLE = "DreamX Origin | Scalable Web & Mobile App Development for Startups";
 const HOME_DESCRIPTION =
   "We build scalable web and mobile applications for startups and businesses. React, Next.js, Flutter, React Native, and full-stack development. Get a free consultation.";
 
@@ -18,7 +18,7 @@ export function Home() {
     <>
       <SeoHead title={HOME_TITLE} description={HOME_DESCRIPTION} canonical="/" />
       <JsonLdOrganization />
-      
+
       <Hero />
 
       <FeatureSection />
@@ -30,9 +30,9 @@ export function Home() {
         <div className="pointer-events-none absolute top-0 left-0 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/4 rounded-full bg-blue-500/10 blur-[120px]" />
         <div className="pointer-events-none absolute bottom-0 right-0 h-[500px] w-[500px] translate-x-1/2 translate-y-1/4 rounded-full bg-purple-500/10 blur-[120px]" />
         <div className="pointer-events-none absolute top-1/2 left-1/2 h-[400px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-pink-500/5 blur-[120px]" />
-        
+
         <DotPattern className="absolute inset-0 z-0 opacity-40" />
-        
+
         <div className="relative z-10 w-full">
           <LogoCloud />
           <Testimonials01 />
