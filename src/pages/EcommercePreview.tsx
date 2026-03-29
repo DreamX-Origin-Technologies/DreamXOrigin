@@ -9,7 +9,10 @@ import {
   Package,
   Shield,
   ShoppingCart,
-  TrendingUp
+  TrendingUp,
+  Clock,
+  Mail,
+  Truck
 } from "lucide-react";
 import { SeoHead } from "@/components/SeoHead";
 import { EcommerceOneStopIllustration } from "@/components/ecommerce-one-stop-illustration";
@@ -152,55 +155,88 @@ export function EcommercePreview() {
       {/* Platform capabilities / What we build for business */}
       <section className="w-full py-20 px-4 md:px-6 overflow-hidden bg-background">
         <div className="container mx-auto max-w-7xl pt-10">
-          <div className="grid lg:grid-cols-[1fr_auto] gap-12 lg:gap-8 items-start w-full relative">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full relative">
 
-            {/* Left Column: Content + Card 1 */}
-            <div className="flex flex-col gap-10 lg:gap-14 max-w-xl z-20">
+            {/* Left Column: Content & Illustration */}
+            <div className="flex flex-col gap-8 max-w-2xl z-20">
               <div className="flex flex-col items-start text-left">
                 <h2 className="text-4xl sm:text-5xl lg:text-[54px] font-bold tracking-tight leading-[1.1] text-foreground mb-4">
                   Scale your storefront:<br className="hidden sm:block" /> explore <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-orange-400 font-semibold px-1">all-in-one</span> platform.
                 </h2>
-                <p className="text-muted-foreground text-base sm:text-[17px] max-w-md leading-relaxed mb-8">
+                <p className="text-muted-foreground text-base sm:text-[17px] max-w-md leading-relaxed mb-6">
                   Everything you need to launch, manage, and scale your online business without limitations.
                 </p>
-                {/* <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                   <Button size="lg" className="rounded-xl h-12 px-8 bg-zinc-900 text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200 shadow-sm font-medium w-full sm:w-auto transition-all">
-                     Try for free!
-                   </Button>
-                   <Button variant="outline" size="lg" className="rounded-xl h-12 px-8 shadow-sm font-medium border-border w-full sm:w-auto hover:bg-muted transition-all">
-                     View Demo
-                   </Button>
-                 </div> */}
               </div>
 
-              {/* Card 1 - Manage */}
-              <div className="lg:pl-6 w-full flex justify-center lg:justify-start">
+              {/* E-commerce Capabilities block to fill the gap */}
+              <div className="mt-8 flex flex-col gap-4 sm:gap-6">
+                <div className="flex items-start gap-4 p-4 rounded-2xl bg-muted/40 border border-border/50 transition-colors hover:bg-muted/60">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-500">
+                    <Mail className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="text-[15px] sm:text-base font-semibold text-foreground">Abandoned Cart Recovery</h3>
+                    <p className="text-xs sm:text-sm text-muted-foreground mt-1 leading-relaxed">Automatically win back up to 25% of lost sales with personalized email and SMS recovery triggers.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 p-4 rounded-2xl bg-muted/40 border border-border/50 transition-colors hover:bg-muted/60">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-rose-500/10 flex items-center justify-center text-rose-500">
+                    <Clock className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="text-[15px] sm:text-base font-semibold text-foreground">Flash Sales & Timers</h3>
+                    <p className="text-xs sm:text-sm text-muted-foreground mt-1 leading-relaxed">Drive urgency with scheduled promotional events, countdown timers, and quantity-limited offers.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 p-4 rounded-2xl bg-muted/40 border border-border/50 transition-colors hover:bg-muted/60">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-500">
+                    <Truck className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="text-[15px] sm:text-base font-semibold text-foreground">Shipping Automation</h3>
+                    <p className="text-xs sm:text-sm text-muted-foreground mt-1 leading-relaxed">Deep integration with major carriers for real-time rates, automated labels, and seamless tracking.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column: 2x2 Staggered Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8 relative z-10 w-full mb-10 sm:mb-0">
+              {/* Column 1 - Starts lower on larger screens */}
+              <div className="flex flex-col gap-6 lg:gap-8 sm:mt-12 lg:mt-16">
                 <FeatureCard
                   title="Manage - Inventory"
                   description="Centralized inventory management to track stock across all your sales channels in real-time."
                   icon={<Package className="w-6 h-6 text-white" />}
                   gradient="from-pink-400 to-orange-400"
-                  className="max-w-full lg:max-w-full"
+                  className="w-full max-w-full"
                 />
-              </div>
-            </div>
-
-            {/* Right Column Grid (Cards 2 & 3) */}
-            <div className="grid sm:grid-cols-2 gap-6 lg:gap-8 relative z-10 w-full lg:w-auto mt-8 lg:mt-0 pb-10">
-              <div className="flex justify-center sm:justify-end lg:mt-32">
-                <FeatureCard
-                  title="Convert - Checkout"
-                  description="Frictionless, one-click checkout experiences designed to minimize cart abandonment and boost conversions."
-                  icon={<ShoppingCart className="w-6 h-6 text-white" />}
-                  gradient="from-fuchsia-400 to-indigo-400"
-                />
-              </div>
-              <div className="flex justify-center sm:justify-start lg:mt-0">
                 <FeatureCard
                   title="Grow - Analytics"
                   description="Actionable insights and comprehensive reporting to help you scale your operations effectively."
                   icon={<TrendingUp className="w-6 h-6 text-white" />}
                   gradient="from-blue-400 to-cyan-300"
+                  className="w-full max-w-full"
+                />
+              </div>
+
+              {/* Column 2 */}
+              <div className="flex flex-col gap-6 lg:gap-8 mb-12 sm:mb-0">
+                <FeatureCard
+                  title="Convert - Checkout"
+                  description="Frictionless, one-click checkout experiences designed to minimize cart abandonment and boost conversions."
+                  icon={<ShoppingCart className="w-6 h-6 text-white" />}
+                  gradient="from-fuchsia-400 to-indigo-400"
+                  className="w-full max-w-full"
+                />
+                <FeatureCard
+                  title="Automate - Workflows"
+                  description="Automate repetitive tasks like order routing, notifications, and inventory alerts to save time."
+                  icon={<Zap className="w-6 h-6 text-white" />}
+                  gradient="from-emerald-400 to-teal-400"
+                  className="w-full max-w-full"
                 />
               </div>
             </div>
