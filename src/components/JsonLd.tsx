@@ -30,10 +30,10 @@ export function JsonLdOrganization() {
   const schema: OrganizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "DreamXOrigin",
+    name: "DreamX Origin",
     url: SITE_URL,
     description:
-      "DreamXOrigin builds scalable web and mobile applications for startups and businesses. We offer React, Next.js, Flutter, React Native, and full-stack development.",
+      "DreamX Origin builds scalable web and mobile applications for startups and businesses. We offer React, Next.js, Flutter, React Native, and full-stack development.",
     contactPoint: {
       "@type": "ContactPoint",
       email: "support@dreamxorigin.com",
@@ -62,7 +62,7 @@ export function JsonLdService({ name, description, slug }: JsonLdServiceProps) {
     "@type": "Service",
     name,
     description,
-    provider: { "@type": "Organization", name: "DreamXOrigin" },
+    provider: { "@type": "Organization", name: "DreamX Origin" },
     areaServed: "Worldwide",
     url: `${SITE_URL}${slug}`,
   };

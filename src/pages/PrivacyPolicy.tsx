@@ -31,15 +31,15 @@ export function PrivacyPolicy() {
           </p>
         </div>
         <p className="text-muted-foreground text-sm leading-relaxed mb-3">
-            By accessing this website, you expressly accept the rules and
-            conditions of this Privacy Policy. If you do not agree, please do not
-            use or access our website.
-          </p>
-          <p className="text-muted-foreground text-sm leading-relaxed">
-            You agree and acknowledge our use and dissemination of your personal
-            information in line with this Privacy Policy by simply using the
-            website.
-          </p>
+          By accessing this website, you expressly accept the rules and
+          conditions of this Privacy Policy. If you do not agree, please do not
+          use or access our website.
+        </p>
+        <p className="text-muted-foreground text-sm leading-relaxed">
+          You agree and acknowledge our use and dissemination of your personal
+          information in line with this Privacy Policy by simply using the
+          website.
+        </p>
         <h2 className="text-xl font-semibold mt-8 mb-4">
           Collection of Personally Identifiable Information and other
           Information
@@ -71,12 +71,12 @@ export function PrivacyPolicy() {
           email address. This information is used in the best interest of the
           customer and the associated service provided. A valid user&apos;s
           I.D/ Passport / Drivers Permit Number is required to verify the
-          credentials of the information submitted. DreamXOrigin
+          credentials of the information submitted. DreamX Origin
           prioritizes on the confidentiality of the customer&apos;s
           information.
         </p>
         <p className="text-muted-foreground leading-relaxed mb-8">
-          DreamXOrigin&apos;s Privacy Policy does not apply to other
+          DreamX Origin&apos;s Privacy Policy does not apply to other
           advertisers or websites. Thus, we are advising you to consult the
           respective Privacy Policies of these third-party ad servers for more
           detailed information. It may include their practices and instructions
