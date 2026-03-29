@@ -6,9 +6,9 @@ import { SeoHead } from "@/components/SeoHead";
 import { ArrowRightIcon, ChevronDownIcon, XIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const PAGE_TITLE = "Careers | Join DreamXOrigin";
+const PAGE_TITLE = "Careers | Join DreamX Origin";
 const PAGE_DESCRIPTION =
-  "We're hiring a Full Stack Developer (2+ years experience). Join DreamXOrigin.";
+  "We're hiring a Full Stack Developer (2+ years experience). Join DreamX Origin.";
 
 const DEPARTMENTS = ["Engineering", "HR"] as const;
 type Department = (typeof DEPARTMENTS)[number];
@@ -38,7 +38,7 @@ const OPEN_ROLES: OpenRole[] = [
     type: "Internship",
     experience: "Intern",
     summary:
-      "DreamXOrigin Technologies is looking for a Full Stack Developer Intern to learn and contribute to our web and mobile applications. This role offers hands-on experience with React, Node.js, and modern tools alongside our engineering team.",
+      "DreamX Origin Technologies is looking for a Full Stack Developer Intern to learn and contribute to our web and mobile applications. This role offers hands-on experience with React, Node.js, and modern tools alongside our engineering team.",
     responsibilities: [
       "Assist in building web applications using React, Next.js, or similar frontend frameworks",
       "Support API and backend development with Node.js, Go, or Python",
@@ -68,7 +68,7 @@ const OPEN_ROLES: OpenRole[] = [
     type: "Internship",
     experience: "Intern",
     summary:
-      "DreamXOrigin Technologies is looking for a Golang Developer Intern to support the development and scaling of our backend services and SaaS platforms. This role provides hands-on exposure to real product development and system architecture.",
+      "DreamX Origin Technologies is looking for a Golang Developer Intern to support the development and scaling of our backend services and SaaS platforms. This role provides hands-on exposure to real product development and system architecture.",
     responsibilities: [
       "Develop backend services using Golang",
       "Build and maintain REST APIs",
@@ -102,7 +102,7 @@ const OPEN_ROLES: OpenRole[] = [
     type: "Internship",
     experience: "Intern",
     summary:
-      "DreamXOrigin Technologies is looking for an HR Intern to support recruitment operations and talent management for our growing engineering team.",
+      "DreamX Origin Technologies is looking for an HR Intern to support recruitment operations and talent management for our growing engineering team.",
     responsibilities: [
       "Source candidates from LinkedIn and job platforms",
       "Coordinate interview scheduling",
@@ -328,7 +328,7 @@ export function Careers() {
               <span className="gradient-text-animate">better</span> products
             </h1>
             <p className="mx-auto mt-8 max-w-2xl text-base text-muted-foreground leading-relaxed md:text-lg">
-              At DreamXOrigin, we build scalable web and mobile applications that help startups and businesses win. We make product development better for everyone: our clients ship faster and reach more users, while our engineers do meaningful work on products that matter.
+              At DreamX Origin, we build scalable web and mobile applications that help startups and businesses win. We make product development better for everyone: our clients ship faster and reach more users, while our engineers do meaningful work on products that matter.
             </p>
             <p className="mt-6 text-base text-muted-foreground md:text-lg">
               Want to join our team? See open roles below.

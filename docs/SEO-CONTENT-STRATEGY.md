@@ -400,4 +400,4 @@ Use these ideas for blog posts, pillar sections, and gated assets; link them fro
 
 ---
 
-*Document version: 1.0 | For: DreamXOrigin (or product name) | Use this as a living doc: update titles/URLs to match your site and refresh keyword lists quarterly.*
+*Document version: 1.0 | For: DreamX Origin (or product name) | Use this as a living doc: update titles/URLs to match your site and refresh keyword lists quarterly.*
