@@ -4,6 +4,7 @@ import Grid from "@/components/ui/grid";
 import { DotPattern } from "@/components/ui/dot-pattern";
 import { FeatureSection } from "@/components/feature-section";
 import StatsCount from "@/components/ui/statscount";
+import { LogoCloud } from "@/components/logo-cloud";
 import { JsonLdOrganization } from "@/components/JsonLd";
 import { SeoHead } from "@/components/SeoHead";
 
@@ -22,6 +23,7 @@ export function Home() {
       <FeatureSection />
 
       <StatsCount />
+      <LogoCloud />
 
       <div className="bg-background min-h-200 relative flex w-full flex-col items-center justify-center overflow-hidden">
         <DotPattern className="min-h-200" glow />
