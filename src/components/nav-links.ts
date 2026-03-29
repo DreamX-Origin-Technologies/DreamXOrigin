@@ -33,7 +33,7 @@ export const companyLinks: LinkItemType[] = [
   },
   {
     label: "Customer Stories",
-    href: "#",
+    href: "/#customer-stories",
     icon: Star,
   },
   {

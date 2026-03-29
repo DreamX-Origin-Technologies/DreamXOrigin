@@ -5,14 +5,14 @@ import bluefin from "@/assets/clients/bluefin.png";
 export function LogoCloud() {
 	return (
 		<div className="flex flex-col items-center justify-center p-10">
-			<div className="mb-10 flex flex-col items-center gap-6">
+			<div className="mb-10 mt-20 flex flex-col items-center gap-6">
 				<h2 className="text-center text-2xl md:text-3xl font-medium tracking-tight text-muted-foreground">
 					Trusted by experts.<br />
 					<span className="font-bold text-foreground">Used by the leaders.</span>
 				</h2>
 			</div>
 			<div className="mask-[linear-gradient(to_right,transparent,black,transparent)] overflow-hidden py-4 w-full max-w-6xl border">
-				<InfiniteSlider gap={100} speed={80} speedOnHover={25}>
+				<InfiniteSlider gap={100} speed={20} speedOnHover={1} >
 					{logos.map((logo) => (
 						<a href={logo?.targetAddr} target="_blank" no-referer>
 							<img

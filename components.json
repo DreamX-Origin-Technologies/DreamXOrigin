@@ -24,6 +24,7 @@
     "@eldoraui": "https://eldoraui.site/r/{name}.json",
     "@motion-primitives": "https://motion-primitives.com/c/{name}.json",
     "@magicui": "https://magicui.design/r/{name}",
-    "@scrollxui": "https://www.scrollxui.dev/registry/{name}.json"
+    "@scrollxui": "https://www.scrollxui.dev/registry/{name}.json",
+    "@ncdai": "https://chanhdai.com/r/{name}.json"
   }
 }
