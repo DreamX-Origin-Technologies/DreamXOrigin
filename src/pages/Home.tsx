@@ -1,6 +1,5 @@
 import Contact from "@/components/contact";
 import Hero from "@/components/hero";
-import Grid from "@/components/ui/grid";
 import { DotPattern } from "@/components/ui/dot-pattern";
 import { FeatureSection } from "@/components/feature-section";
 import StatsCount from "@/components/ui/statscount";

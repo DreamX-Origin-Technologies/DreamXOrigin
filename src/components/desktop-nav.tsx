@@ -19,7 +19,7 @@ export function DesktopNav() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger className="bg-transparent">
-            Product
+            Products
           </NavigationMenuTrigger>
           <NavigationMenuContent className="bg-muted/50 p-1 pr-1.5 dark:bg-background">
             <div className="grid w-2xs grid-cols-1 gap-2 p-2 rounded-md border bg-popover shadow">
