@@ -24,7 +24,7 @@ import {
   ImageComparisonSlider,
 } from '@/components/motion-primitives/image-comparison';
 import emptyShopImage from '@/assets/retail-shop-empty.jpg';
-import successShopImage from '@/assets/ecommerce-thriving.png';
+import successShopImage from '@/assets/online-retail-shop.png';
 import { motion } from 'motion/react';
 
 function FeatureCard({ title, description, icon, gradient, className }: { title: string, description: string, icon: React.ReactNode, gradient: string, className?: string }) {
@@ -246,9 +246,9 @@ export function EcommercePreview() {
 
       <section className="w-full px-4 py-8 bg-muted/30">
         {/* Center: Image Comparison */}
-        <div className="relative z-10 flex items-center justify-center max-w-6xl mx-auto">
+        <div className="relative z-10 flex items-center justify-center max-w-7xl mx-auto">
           <div className="w-full aspect-video sm:aspect-[4/3] lg:aspect-[21/9] relative rounded-2xl overflow-hidden shadow-2xl border border-border/10">
-            <ImageComparison className="w-full h-full object-cover" enableHover>
+            <ImageComparison className="w-full h-full object-cover">
               <ImageComparisonImage
                 src={successShopImage}
                 alt="Thriving Online Store"
@@ -258,7 +258,7 @@ export function EcommercePreview() {
                 src={emptyShopImage}
                 alt="Empty Retail Store"
                 position="right"
-                className="opacity-90 saturate-50 contrast-125"
+                className="opacity-100 grayscale"
               />
               <ImageComparisonSlider className="bg-white/80 backdrop-blur-sm w-[2px]">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-background border border-border/50 rounded-full flex gap-1 items-center justify-center shadow-2xl cursor-ew-resize">
