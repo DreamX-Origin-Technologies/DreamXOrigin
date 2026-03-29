@@ -44,14 +44,14 @@ export function EcommerceOneStopIllustration({ className }: { className?: string
   return (
     <div
       className={cn(
-        "relative flex items-center justify-center w-full min-h-[420px] md:min-h-[480px] max-w-2xl mx-auto",
+        "relative flex flex-col items-center justify-center w-full min-h-auto md:min-h-[480px] max-w-2xl mx-auto py-10 md:py-0 px-4 md:px-0",
         className
       )}
       aria-hidden
     >
       {/* Central glowing hexagon / 3D-style hub */}
       <motion.div
-        className="absolute inset-0 flex items-center justify-center pointer-events-none"
+        className="relative md:absolute md:inset-0 flex items-center justify-center pointer-events-none mb-10 md:mb-0"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -131,53 +131,54 @@ export function EcommerceOneStopIllustration({ className }: { className?: string
       </motion.div>
 
       {/* Floating stat cards around the center */}
-      {statCards.map((card, i) => {
-        const Icon = card.icon;
-        const positionClasses = {
-          top: "top-4 left-1/2 -translate-x-1/2",
-          right: "right-4 top-1/2 -translate-y-1/2",
-          bottom: "bottom-4 left-1/2 -translate-x-1/2",
-          left: "left-4 top-1/2 -translate-y-1/2",
-        };
-        return (
-          <motion.div
-            key={card.label}
-            className={cn(
-              "absolute flex items-center gap-3 rounded-xl border border-border/80 bg-card/95 px-4 py-3 shadow-xl backdrop-blur-sm",
-              "min-w-[160px] max-w-[200px]",
-              positionClasses[card.position]
-            )}
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{
-              opacity: 1,
-              scale: 1,
-              y: [0, -4, 0],
-            }}
-            transition={{
-              opacity: { delay: 0.2 + i * 0.1, duration: 0.4 },
-              scale: { delay: 0.2 + i * 0.1, duration: 0.4 },
-              y: { duration: 3 + i * 0.5, repeat: Infinity, ease: "easeInOut" },
-            }}
-          >
-            <div
+      <div className="flex flex-col gap-4 md:block w-full">
+        {statCards.map((card, i) => {
+          const Icon = card.icon;
+          const positionClasses = {
+            top: "md:top-4 md:left-1/2 md:-translate-x-1/2",
+            right: "md:right-4 md:top-1/2 md:-translate-y-1/2",
+            bottom: "md:bottom-4 md:left-1/2 md:-translate-x-1/2",
+            left: "md:left-4 md:top-1/2 md:-translate-y-1/2",
+          };
+          return (
+            <motion.div
+              key={card.label}
               className={cn(
-                "flex size-10 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br text-white",
-                card.color
+                "relative md:absolute flex items-center gap-3 rounded-xl border border-border/80 bg-card/95 px-4 py-3 shadow-xl backdrop-blur-sm w-full md:w-auto md:min-w-[170px] md:max-w-[200px]",
+                positionClasses[card.position]
               )}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+                y: [0, -4, 0],
+              }}
+              transition={{
+                opacity: { delay: 0.2 + i * 0.1, duration: 0.4 },
+                scale: { delay: 0.2 + i * 0.1, duration: 0.4 },
+                y: { duration: 3 + i * 0.5, repeat: Infinity, ease: "easeInOut" },
+              }}
             >
-              <Icon className="size-5" />
-            </div>
-            <div className="min-w-0">
-              <p className="font-semibold text-foreground text-sm leading-tight">
-                {card.label}
-              </p>
-              <p className="text-muted-foreground text-xs truncate">
-                {card.subtext}
-              </p>
-            </div>
-          </motion.div>
-        );
-      })}
+              <div
+                className={cn(
+                  "flex size-10 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br text-white",
+                  card.color
+                )}
+              >
+                <Icon className="size-5" />
+              </div>
+              <div className="min-w-0">
+                <p className="font-semibold text-foreground text-sm leading-tight">
+                  {card.label}
+                </p>
+                <p className="text-muted-foreground text-xs truncate">
+                  {card.subtext}
+                </p>
+              </div>
+            </motion.div>
+          );
+        })}
+      </div>
     </div>
   );
 }
