@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { RainbowButton } from "@/components/ui/rainbow-button";
+import { PopupButton } from "react-calendly";
 import { MagicCard } from "@/components/ui/magic-card";
 import { Meteors } from "@/components/ui/meteors";
 import { Badge } from "@/components/ui/badge";
@@ -96,16 +96,24 @@ export function EcommercePreview() {
           </p>
 
           <div className="mt-8 flex w-full flex-col items-center justify-center gap-4 sm:w-auto sm:flex-row">
-            <RainbowButton className="h-10 px-7 text-base font-semibold">
-              Book a Demo
-            </RainbowButton>
-            <Button
+            <PopupButton
+              url="https://calendly.com/dreamxorigintech"
+              rootElement={document.getElementById("root")!}
+              text="Book a Demo"
+              className="relative cursor-pointer transition-all inline-flex items-center justify-center gap-2 shrink-0 rounded-md outline-none focus-visible:ring-[3px] focus-visible:ring-ring aria-invalid:border-destructive text-sm font-semibold text-white whitespace-nowrap disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 [&_svg]:text-white animate-rainbow-button shadow-[0_4px_14px_0_rgba(0,0,0,0.12),0_0_0_1px_rgba(0,0,0,0.04)] dark:shadow-[0_4px_14px_0_rgba(0,0,0,0.35),0_0_20px_-4px_rgba(124,58,237,0.25),0_0_0_1px_rgba(255,255,255,0.06)] [background-clip:padding-box,border-box,border-box] [background-origin:border-box] [border:2px_solid_transparent] h-10 px-7 text-base font-semibold"
+              styles={{
+                backgroundImage: `linear-gradient(#1c1c1e, #1c1c1e), linear-gradient(#1c1c1e 50%, rgba(255,255,255,0.06) 80%, transparent), linear-gradient(90deg, var(--color-1), var(--color-5), var(--color-3), var(--color-4), var(--color-2))`,
+                backgroundSize: "100% 100%, 100% 100%, 200% 200%",
+                backgroundPosition: "0 0, 0 0, 0% 50%",
+              }}
+            />
+            {/* <Button
               variant="outline"
               size="lg"
               className="h-10 border-[#e7d7eb] bg-[#fff7ff] px-7 text-base text-[#4b3651] hover:bg-[#fff1ff]"
             >
               Meet an advisor
-            </Button>
+            </Button> */}
           </div>
 
           <div className="relative mt-12 w-full max-w-5xl z-2">
@@ -356,12 +364,20 @@ export function EcommercePreview() {
             Join businesses that sell more with one platform. Get a demo or start a conversation with our team.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <RainbowButton className="h-12 px-8 text-base font-semibold">
-              Get a Quick Demo
-            </RainbowButton>
-            <Button variant="outline" size="lg" className="h-12 px-8 text-base">
+            <PopupButton
+              url="https://calendly.com/dreamxorigintech"
+              rootElement={document.getElementById("root")!}
+              text="Get a Quick Demo"
+              className="relative cursor-pointer transition-all inline-flex items-center justify-center gap-2 shrink-0 rounded-md outline-none focus-visible:ring-[3px] focus-visible:ring-ring aria-invalid:border-destructive text-sm font-semibold text-white whitespace-nowrap disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 [&_svg]:text-white animate-rainbow-button shadow-[0_4px_14px_0_rgba(0,0,0,0.12),0_0_0_1px_rgba(0,0,0,0.04)] dark:shadow-[0_4px_14px_0_rgba(0,0,0,0.35),0_0_20px_-4px_rgba(124,58,237,0.25),0_0_0_1px_rgba(255,255,255,0.06)] [background-clip:padding-box,border-box,border-box] [background-origin:border-box] [border:2px_solid_transparent] h-12 px-8 text-base font-semibold"
+              styles={{
+                backgroundImage: `linear-gradient(#1c1c1e, #1c1c1e), linear-gradient(#1c1c1e 50%, rgba(255,255,255,0.06) 80%, transparent), linear-gradient(90deg, var(--color-1), var(--color-5), var(--color-3), var(--color-4), var(--color-2))`,
+                backgroundSize: "100% 100%, 100% 100%, 200% 200%",
+                backgroundPosition: "0 0, 0 0, 0% 50%",
+              }}
+            />
+            {/* <Button variant="outline" size="lg" className="h-12 px-8 text-base">
               Talk to Sales
-            </Button>
+            </Button> */}
           </div>
         </div>
       </section>
